@@ -68,3 +68,10 @@ jobs:
           OCI_SSH_PUBLIC_KEY: ${{ secrets.OCI_SSH_PUBLIC_KEY }}
           TELEGRAM_USER_ID: ${{ secrets.TELEGRAM_USER_ID }}
           TELEGRAM_BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_API_KEY }}
+
+      - name: Debug environment
+        run: |
+          echo "OCI_REGION=$OCI_REGION"
+          echo "OCI_COMPARTMENT_ID=$OCI_COMPARTMENT_ID"
+          echo "OCI_USER_ID=$OCI_USER_ID"
+          echo "OCI_TENANCY_ID=$OCI_TENANCY_ID"
